@@ -1,10 +1,15 @@
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Highlights from './components/Highlights';
+
+
 export default function App() {
 
   return (
-    <>
-      <div>
-        <h1 className="text-secondary underline">Hello World</h1>
-      </div>
-    </>
+    <main className="bg-black">
+      <Navbar />
+      <Hero />
+      <Highlights />
+    </main>
   )
 }
