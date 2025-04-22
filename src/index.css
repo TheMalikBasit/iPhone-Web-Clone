@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
 
 @theme {
   /* To alter screens sizes use --breakpoint-sm: custom number, --breakpoint-md: custom number, --breakpoint-lg: custom number  */
@@ -13,11 +15,6 @@
   --color-gray-200: "#afafaf";
   --color-gray-300: "#42424570";
 }
-
-
-
-@import "tailwindcss/preflight";
-@import "tailwindcss/utilities";
 
 * {
   margin: 0;
@@ -43,7 +40,7 @@ canvas {
   margin-inline-start: auto;
   margin-inline-end: auto;
   position: relative;
-  max-width: 100%;
+  max-width: 1120px;
 }
 
 .flex-center {
