@@ -43,7 +43,7 @@ export default function Hero() {
     <section className="w-full bg-black relative nav-height">
       <div className="w-full h-5/6 flex flex-col flex-center">
         <p id="iphone-text" className="hero-title">
-          iPhone 16 Prob
+          iPhone 16 Pro
         </p>
         <div className="md:w-10/12 w-9/12">
           <video
