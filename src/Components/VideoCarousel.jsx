@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { hightlightsSlides } from "../Constants/index";
 import { useRef, useState } from "react";
+import { pauseImg, playImg, replayImg,  } from "../utils";
 
 const VideoCarousel = () => {
   const videoRef = useRef([]);
@@ -42,6 +43,7 @@ const VideoCarousel = () => {
                   preload="auto"
                   muted
                   playsInline
+                  autoPlay
                   ref={(element) => (videoRef.current[i] = element)}
                   onPlay={() => {
                     setVideo((prevVideo) => ({
@@ -80,6 +82,11 @@ const VideoCarousel = () => {
             </span>
           ))}
         </div>
+        <button className="control-btn">
+          <img src={isLastVideo ? replayImg : 
+            isPlaying ? pauseImg : playImg} 
+            alt={isLastVideo ? "Replay" : isPlaying ? "Pause" : "Play"} />
+        </button>
         </div>
     </>
   );
