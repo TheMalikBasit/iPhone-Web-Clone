@@ -32,13 +32,12 @@ export default function Hero() {
         opacity: 1,
       }
     );
-    gsap.to("#cta",{
-        y: -50,
-        delay: 2,
-        opacity: 1,
-      });
+    gsap.to("#cta", {
+      y: -50,
+      delay: 2,
+      opacity: 1,
+    });
   }, []);
-
   return (
     <section className="w-full bg-black relative nav-height">
       <div className="w-full h-5/6 flex flex-col flex-center">
