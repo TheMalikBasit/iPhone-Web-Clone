@@ -6,12 +6,12 @@ import { useGLTF, useTexture } from "@react-three/drei";
 function Model(props) {
   const { nodes, materials } = useGLTF("/models/scene.glb");
 
-  if (!props.item.image) {
+  if (!props.item.img) {
     console.error("Image path is undefined");
     return null; // Return null instead of undefined
   }
   
-  const texture = useTexture(props.item.image);  
+  const texture = useTexture(props.item.img);  
 
   useEffect(() => {
     Object.entries(materials).forEach(([name, material]) => {
@@ -22,7 +22,7 @@ function Model(props) {
         name !== "jlzuBkUzuJqgiAK" &&
         name !== "xNrofRCqOXXHVZt"
       ) {
-        material.color.set(props.item.colors[0]);
+        material.color.set(props.item.color[0]);
       }
       material.needsUpdate = true;
     });

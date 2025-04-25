@@ -12,8 +12,8 @@ const Model = () => {
   const [size, setSize] = useState("small");
   const [model, setModel] = useState({
     title: "iPhone 15 Pro in natural Titanium",
-    colors: ["#8F8A81", "#FFE7B9", "#6F6C64"],
-    image: yellowImg,
+    color: ["#8F8A81", "#FFE7B9", "#6F6C64"],
+    img: yellowImg,
   });
 
   // This refer to our camera control
