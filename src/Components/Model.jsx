@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ModelView from "./ModelView";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { yellowImg } from "../utils";
 import * as THREE from "three";
 import { View } from "@react-three/drei";
@@ -71,8 +71,8 @@ const Model = () => {
               style={{
                 position: "fixed",
                 top: 0,
-                left: 0,
                 bottom: 0,
+                left: 0,
                 right: 0,
                 overflow: "hidden",
               }}
