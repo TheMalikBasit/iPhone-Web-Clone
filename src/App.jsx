@@ -3,6 +3,7 @@ import Hero from './Components/Hero';
 import Highlights from './components/Highlights';
 import Model from './Components/Model';
 import * as  Sentry from "@sentry/react";
+import Features from './Components/Features';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Hero />
       <Highlights />
       <Model />
+      <Features />
     </main>
   )
 }

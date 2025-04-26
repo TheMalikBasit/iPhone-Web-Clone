@@ -7,7 +7,7 @@ import * as THREE from "three";
 import { View } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { models, sizes } from "../Constants";
-import { animateWithGsap } from "../utils/animation";
+import { animateWithGsapTimeline } from "../utils/animation";
 
 const Model = () => {
   const [size, setSize] = useState("small");
@@ -33,13 +33,13 @@ const Model = () => {
 
   useEffect(() => {
     if(size === 'large'){
-      animateWithGsap(tl, small, smallRotation, '#view1', '#view2', {
+      animateWithGsapTimeline(tl, small, smallRotation, '#view1', '#view2', {
         transform: "translateX(-100%)",
         duration: 2,
       } )
     }
     if(size === 'small'){
-      animateWithGsap(tl, large, largeRotation, '#view2', '#view1', {
+      animateWithGsapTimeline(tl, large, largeRotation, '#view2', '#view1', {
         transform: "translateX(0%)",
         duration: 2,
       } )
@@ -50,6 +50,7 @@ const Model = () => {
     gsap.to("#heading", {
       scrollTrigger: {
         trigger: "#heading",
+        start: "top 80%",
       },
       y: 0,
       opacity: 1,
