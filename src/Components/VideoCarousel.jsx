@@ -1,11 +1,11 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
-gsap.registerPlugin(ScrollTrigger);
 import { useEffect, useRef, useState } from "react";
-
-import { hightlightsSlides } from '../Constants';
+import { hightlightsSlides } from '../constants';
 import { pauseImg, playImg, replayImg } from "../utils";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const VideoCarousel = () => {
   const videoRef = useRef([]);
@@ -159,6 +159,7 @@ const VideoCarousel = () => {
     <>
       <div className="flex items-center">
         {hightlightsSlides.map((list, i) => (
+          <div className="flex items-center" key={i}>
           <div key={list.id} id="slider" className="sm:pr-20 pr-10">
             <div className="video-carousel_container">
               <div className="w-full h-full flex-center rounded-3xl overflow-hidden bg-black">
@@ -194,6 +195,7 @@ const VideoCarousel = () => {
               </div>
             </div>
           </div>
+          </ div>
         ))}
       </div>
 

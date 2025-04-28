@@ -2,12 +2,26 @@ import { useGSAP } from "@gsap/react";
 import { explore1Img, explore2Img, exploreVideo } from "../utils";
 import { animateWithGsap } from "../utils/animation";
 import { useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Features = () => {
   const videoRef = useRef();
 
+  useGSAP(() => {
+    gsap.to('#exploreVideo', {
+      scrollTrigger: {
+        trigger: "#exploreVideo",
+        toggleActions: "play pause reverse restart",
+        start: "top 85%",
+      },
+      onComplete: () => {
+        videoRef.current.play();
+      }
+    })
+  }, []);
+
   animateWithGsap("#features", { y: 0, opacity: 1 }, { start: "top 85%" });
-  animateWithGsap("#exploreVideo", { y: 0 }, { start: "top 85%" });
   animateWithGsap(".g_grow",
     { scale: 1, opacity: 1, ease: "power1" },
     { scrub: 5.5, start: "top 85%" }
@@ -68,7 +82,7 @@ const Features = () => {
                     <span className="text-white">
                       the finest iPhone to feature an aerospace-grade tatinium
                       design
-                    </span>
+                    </span>,
                     using the same alloy that space crafts use for missions to
                     Mars.
                   </p>
