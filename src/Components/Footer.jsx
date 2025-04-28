@@ -1,9 +1,9 @@
 const Footer = () => {
   return (
-    <div className="bg-zinc w-full common-padding">
+    <div className="common-padding">
       <div className="screen-max-width">
         <div className="mr-10 ml-20 flex flex-col md:flex-row justify-between items-start md:items-center">
-          <div className="flex flex-col pt-10 pb-10">
+          <div className="flex flex-col">
             <a href="www.facebook.com">Facebook</a>
             <a href="222.google.com">Google</a>
           </div>
