@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="common-padding">
+    <Footer className="common-padding">
       <div className="screen-max-width">
         <div className="mr-10 ml-20 flex flex-col md:flex-row justify-between items-start md:items-center">
           <div className="flex flex-col">
@@ -14,7 +14,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Footer>
   );
 };
 
