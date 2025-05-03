@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { rightImg, watchImg } from "../utils";
-import VideoCarousel from "../Components/VideoCarousel";
+import VideoCarousel from "../components/VideoCarousel";
 
 export default function Highlights() {
   useGSAP(() => {
