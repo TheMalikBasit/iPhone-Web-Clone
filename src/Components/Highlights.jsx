@@ -33,10 +33,10 @@ export default function Highlights() {
   }, []);
 
   return (
-    <section className="w-screen overflow-hidden bg-zinc h-full common-padding">
-      <div className="secreen-max-width">
+    <section id="highlights" className="w-screen overflow-hidden bg-zinc h-full common-padding">
+      <div className="screen-max-width">
         <div className="w-full md:flex items-end justify-between mb-12">
-          <h1 id="title" className="section-heading mb-3">
+          <h1 id="title" className="section-heading">
             Get the Highlights
           </h1>
           <div className="flex flex-wrap items-end gap-5">
