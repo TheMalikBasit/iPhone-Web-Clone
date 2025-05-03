@@ -1,10 +1,10 @@
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
+import Navbar from './Components/Navbar';
+import Hero from './Components/Hero';
 import Highlights from './Components/Highlights';
-import Model from './components/Model';
+import Model from './Components/Model';
 import * as  Sentry from "@sentry/react";
-import Features from './components/Features';
-import Core from './components/Core';
+import Features from './Components/Features';
+import Core from './Components/Core';
 import Footer from './Components/Footer';
 
 const App = () => {
